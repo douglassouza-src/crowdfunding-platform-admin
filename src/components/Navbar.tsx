@@ -13,6 +13,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import SmartContractIcon from '@mui/icons-material/AccountBalanceWallet';
 import { Link as RouterLink } from 'react-router-dom';
 import logoGiv3 from '../assets/giv3.png';
 
@@ -89,6 +90,13 @@ const Navbar: React.FC = () => {
               <MenuItem 
                 onClick={handleClose} 
                 component={RouterLink} 
+                to="/contracts"
+              >
+                <SmartContractIcon sx={{ mr: 1 }} /> Contratos
+              </MenuItem>
+              <MenuItem 
+                onClick={handleClose} 
+                component={RouterLink} 
                 to="/register/receiver"
               >
                 Receber Doações
@@ -119,6 +127,15 @@ const Navbar: React.FC = () => {
               startIcon={<DashboardIcon />}
             >
               Painel
+            </Button>
+            <Button 
+              color="inherit" 
+              component={RouterLink} 
+              to="/contracts"
+              sx={{ mr: 1 }}
+              startIcon={<SmartContractIcon />}
+            >
+              Contratos
             </Button>
             <Button 
               color="inherit" 

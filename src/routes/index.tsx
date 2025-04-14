@@ -5,7 +5,8 @@ import {
   ReceiverRegisterPage, 
   SupplierRegisterPage, 
   DonorRegisterPage, 
-  DashboardPage 
+  DashboardPage,
+  ContractsPage
 } from '../pages';
 
 const AppRoutes: React.FC = () => {
@@ -16,6 +17,7 @@ const AppRoutes: React.FC = () => {
       <Route path="/register/supplier" element={<SupplierRegisterPage />} />
       <Route path="/register/donor" element={<DonorRegisterPage />} />
       <Route path="/dashboard" element={<DashboardPage />} />
+      <Route path="/contracts" element={<ContractsPage />} />
       
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
